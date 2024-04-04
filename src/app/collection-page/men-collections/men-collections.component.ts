@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RecupApiService } from '../../Services/recup-api.service';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from '../../nav-bar/nav-bar.component';
@@ -10,13 +10,16 @@ import { NavBarComponent } from '../../nav-bar/nav-bar.component';
   templateUrl: './men-collections.component.html',
   styleUrl: './men-collections.component.scss'
 })
-export class MenCollectionsComponent  {
+export class MenCollectionsComponent implements OnInit {
   apiData: any;
-  constructor( ){ }
+  constructor( private apiService: RecupApiService){ }
+  
+  ngOnInit(){
+    console.log('start of calling the api');
 
-  ngOnInit(): void{
-    // this.apiService.getConfig().subscribe(infoApi => {
-    //   this.apiData = infoApi;
-    // })
+    this.apiService.getConfig().subscribe((infoApi): any => {
+      this.apiData = infoApi;
+    })
+    console.log('fin de l appel de l api')
   }
 }
