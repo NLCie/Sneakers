@@ -1,11 +1,14 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
-    
+
     <h1>Les informations de l'API</h1>
     <div *ngIf="apiData">
-        <h2>les voila </h2>
+        <h2>les noms de l'api </h2>
         <ul>
             <li *ngFor="let item of apiData">{{ item.name }} </li>
         </ul>
     </div>
+
+
 </div>
+
