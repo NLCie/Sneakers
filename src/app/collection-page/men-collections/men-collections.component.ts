@@ -12,6 +12,8 @@ import { NavBarComponent } from '../../nav-bar/nav-bar.component';
 })
 export class MenCollectionsComponent implements OnInit {
   apiData: any;
+  images: string[] = ['1.jpg', '1men.jpg', '2men.jpg', '3men.jpg', '4men.jpg', '5men.jpg', '6men.jpg', 
+  '7men.jpg', '8men.jpg', '9men.jpg', '10men.jpg', '11men.jpg']
   constructor( private apiService: RecupApiService){ }
   
   ngOnInit(){

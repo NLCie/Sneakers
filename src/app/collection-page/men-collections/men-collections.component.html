@@ -1,13 +1,32 @@
 <app-nav-bar></app-nav-bar>
 <div class="container">
 
-    <h1>Les informations de l'API</h1>
-    <div *ngIf="apiData">
+    <h1 class="text-center my-4 fw-bold titre">Les informations de l'API</h1>
+    <!-- <div *ngIf="apiData">
         <h2>les noms de l'api </h2>
         <ul>
             <li *ngFor="let item of apiData">{{ item.name }} </li>
         </ul>
+    </div> -->
+    <div *ngIf="apiData">
+      <div *ngFor="let item of apiData">
+        <div class="row">
+          
+          <div *ngFor="let image of images" class="card mx-3 my-3" style="width: 18rem;">
+            <a href="#" routerLink="/women" routerLinkActive="activeLink">
+              <img class="card-img-top object-fit-cover imageCard" [src]="'assets/images/men shoes/'+ image" alt="Card image cap">
+            </a>
+            
+            <div class="card-body">
+              <p class="card-text"><span class="fw-bold px-2">NOM:</span>{{ item.name }} </p>
+              <p class="card-text my-2"><span class="fw-bold px-2">TYPE:</span>{{item.type}} </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
+    
 
 
 </div>
