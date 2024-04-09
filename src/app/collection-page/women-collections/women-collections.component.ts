@@ -12,7 +12,7 @@ import { RecupApiService } from '../../Services/recup-api.service';
 })
 export class WomenCollectionsComponent {
   apiData: any;
-
+  Visible: boolean= false;
   images: string[] = ['1women.jpg', '2women.jpg', '3women.jpg', '4women.jpg', '5women.jpg', '6women.jpg', '7women.jpg', 
   '8women.jpg', '9women.jpg', '10women.jpg', '11women.jpg', '12women.jpg']
   constructor( private apiService: RecupApiService){ }

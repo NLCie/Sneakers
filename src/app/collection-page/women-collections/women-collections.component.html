@@ -15,6 +15,12 @@
               <div class="card-body">
                 <p class="card-text"><span class="fw-bold px-2">NOM:</span>{{ item.name }} </p>
                 <p class="card-text my-2"><span class="fw-bold px-2">TYPE:</span>{{item.type}} </p>
+                <div>
+                  <button (click)="Visible = !Visible " class="fw-bold afficherPlus">{{ Visible ? 'Masque muscle' : 'Afficher muscle' }}</button>
+                </div>
+                <div *ngIf="Visible">
+                  <p>{{ item.muscle}} </p>
+                </div>
               </div>
             </div>
           </div>
