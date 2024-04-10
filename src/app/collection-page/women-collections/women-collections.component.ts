@@ -12,9 +12,9 @@ import { RecupApiService } from '../../Services/recup-api.service';
 })
 export class WomenCollectionsComponent {
   apiData: any;
-  Visible: boolean= false;
-  images: string[] = ['1women.jpg', '2women.jpg', '3women.jpg', '4women.jpg', '5women.jpg', '6women.jpg', '7women.jpg', 
-  '8women.jpg', '9women.jpg', '10women.jpg', '11women.jpg', '12women.jpg']
+  // Visible: boolean= false;
+  images = [{image:'1women.jpg', isVisible: false}, {image:'2women.jpg', isVisible: false}, {image:'3women.jpg', isVisible: false}, {image:'4women.jpg', isVisible: false}, {image:'5women.jpg', isVisible: false}, {image:'6women.jpg', isVisible: false}, {image:'7women.jpg', isVisible: false}, 
+  {image:'8women.jpg', isVisible: false}, {image:'9women.jpg', isVisible: false}, {image:'10women.jpg', isVisible: false}, {image:'11women.jpg', isVisible: false}, {image:'12women.jpg', isVisible: false}]
   constructor( private apiService: RecupApiService){ }
   
   ngOnInit(){
