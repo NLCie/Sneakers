@@ -7,10 +7,11 @@ import { provideHttpClient } from '@angular/common/http';
 import { RecupApiService } from './Services/recup-api.service';
 import { InterceptorService } from './Interceptors/interceptor.service';
 import { NgxsModule } from '@ngxs/store';
+import { ZooState } from './store/states/animal.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration()
   ,{ provide: RecupApiService}, provideHttpClient(), { provide: InterceptorService}, 
-  importProvidersFrom(NgxsModule.forRoot([]))
+  importProvidersFrom(NgxsModule.forRoot([ZooState]))
   ]
 };

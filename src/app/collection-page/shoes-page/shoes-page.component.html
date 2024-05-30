@@ -83,3 +83,11 @@
         <div class="col col-lg-2"></div>
     </div>
 </div>
+<div>
+    <div>
+        <form [formGroup]="inputForm" (ngSubmit)="feedZebraNewValue()">
+            <input type="text" formControlName="name">
+        <button class="p-3">Save</button>
+        </form>
+    </div>
+</div>

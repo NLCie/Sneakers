@@ -1,6 +1,10 @@
+export interface ZebraFood {
+    name: string;
+    hay: number;
+    carrots: number;
+}
 
-
-export class AddAnimal {
-    static readonly type = '[Zoo] Add Animal';
-    constructor(public name: string) {}
+export class FeedZebra {
+    static readonly type = '[Zoo] FeedZebra';
+    constructor(public zebraToFeed: ZebraFood) {}
 }
